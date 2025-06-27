@@ -1,270 +1,131 @@
-<mxfile host="app.diagrams.net" modified="2025-06-27T07:56:29.000Z" agent="5.0" etag="abc123" version="24.5.4" type="device">
-  <diagram name="Architecture-Flux-Principal" id="main-architecture">
-    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="1">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        
-        <!-- Zone GitLab CI/CD (Vert) -->
-        <mxCell id="gitlab-zone" value="GitLab CI/CD Pipeline" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#2E8B57;strokeColor=#228B22;fontColor=#FFFFFF;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
-          <mxGeometry x="80" y="120" width="480" height="300" as="geometry"/>
-        </mxCell>
-        
-        <!-- Trigger -->
-        <mxCell id="trigger" value="🚀 Pipeline Trigger" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="120" y="160" width="120" height="50" as="geometry"/>
-        </mxCell>
-        
-        <!-- Stages Pipeline -->
-        <mxCell id="prepare-stage" value="📦 Prepare" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
-          <mxGeometry x="120" y="240" width="80" height="40" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="build-stage" value="🔨 Build" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
-          <mxGeometry x="220" y="240" width="80" height="40" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="test-stage" value="🧪 Test" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#228B22;strokeColor=#006400;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="320" y="240" width="80" height="40" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="report-stage" value="📊 Report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
-          <mxGeometry x="420" y="240" width="80" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Runners -->
-        <mxCell id="runners" value="🏃‍♂️ GitLab Runners" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
-          <mxGeometry x="120" y="320" width="200" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Artifacts -->
-        <mxCell id="artifacts" value="📁 Artifacts Storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
-          <mxGeometry x="360" y="320" width="140" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Zone Karate Framework (Rouge) -->
-        <mxCell id="karate-zone" value="Karate Test Framework" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#DC143C;strokeColor=#B22222;fontColor=#FFFFFF;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
-          <mxGeometry x="640" y="120" width="400" height="300" as="geometry"/>
-        </mxCell>
-        
-        <!-- Test Runner -->
-        <mxCell id="test-runner" value="⚙️ Karate Runner" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
-          <mxGeometry x="680" y="160" width="120" height="50" as="geometry"/>
-        </mxCell>
-        
-        <!-- Feature Files -->
-        <mxCell id="feature-files" value="📄 Feature Files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
-          <mxGeometry x="680" y="240" width="100" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Test Data -->
-        <mxCell id="test-data" value="📊 Test Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
-          <mxGeometry x="800" y="240" width="100" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Results -->
-        <mxCell id="results" value="📋 Results Collection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
-          <mxGeometry x="920" y="240" width="100" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Assertions -->
-        <mxCell id="assertions" value="✅ Assertions & Validations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B22222;strokeColor=#8B0000;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="680" y="320" width="200" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Reports Generator -->
-        <mxCell id="reports-gen" value="📈 Reports Generator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
-          <mxGeometry x="920" y="320" width="100" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Zone APIs REST (Bleu) -->
-        <mxCell id="apis-zone" value="External REST APIs" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#4169E1;strokeColor=#1E3A8A;fontColor=#FFFFFF;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
-          <mxGeometry x="1120" y="120" width="400" height="300" as="geometry"/>
-        </mxCell>
-        
-        <!-- API Gateway -->
-        <mxCell id="api-gateway" value="🌐 API Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
-          <mxGeometry x="1160" y="160" width="120" height="50" as="geometry"/>
-        </mxCell>
-        
-        <!-- Auth Layer -->
-        <mxCell id="auth-layer" value="🔐 Authentication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
-          <mxGeometry x="1160" y="240" width="100" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- REST Endpoints -->
-        <mxCell id="endpoints" value="🔗 REST Endpoints" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="240" width="100" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Response Processing -->
-        <mxCell id="response-proc" value="⚡ Response Processing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4169E1;strokeColor=#1E3A8A;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="1400" y="240" width="100" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Business Logic -->
-        <mxCell id="business-logic" value="🧠 Business Logic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
-          <mxGeometry x="1160" y="320" width="120" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Database -->
-        <mxCell id="database" value="🗄️ Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
-          <mxGeometry x="1320" y="320" width="80" height="60" as="geometry"/>
-        </mxCell>
-        
-        <!-- Zone Infrastructure (Gris) -->
-        <mxCell id="infra-zone" value="Infrastructure & Support" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#708090;strokeColor=#2F4F4F;fontColor=#FFFFFF;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
-          <mxGeometry x="80" y="480" width="1440" height="200" as="geometry"/>
-        </mxCell>
-        
-        <!-- Environments -->
-        <mxCell id="env-dev" value="💻 DEV" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="120" y="520" width="80" height="40" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="env-qa" value="🧪 QA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="220" y="520" width="80" height="40" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="env-staging" value="🎭 STAGING" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="320" y="520" width="80" height="40" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="env-prod" value="🚀 PROD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="420" y="520" width="80" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Monitoring -->
-        <mxCell id="monitoring" value="📊 Monitoring & Logging" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="600" y="520" width="160" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Notifications -->
-        <mxCell id="notifications" value="🔔 Notifications" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFD700;strokeColor=#FF8C00;" vertex="1" parent="1">
-          <mxGeometry x="800" y="520" width="120" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Dashboard -->
-        <mxCell id="dashboard" value="📈 Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="960" y="520" width="100" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Storage -->
-        <mxCell id="storage" value="💾 Test Data Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="1120" y="520" width="100" height="60" as="geometry"/>
-        </mxCell>
-        
-        <!-- Security -->
-        <mxCell id="security" value="🔒 Security & Secrets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="520" width="140" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Performance -->
-        <mxCell id="performance" value="⚡ Performance Metrics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="120" y="600" width="160" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Error Tracking -->
-        <mxCell id="error-tracking" value="🚨 Error Tracking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="320" y="600" width="120" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- FLUX ARROWS -->
-        
-        <!-- GitLab to Karate -->
-        <mxCell id="flow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=3;strokeColor=#FF8C00;fontColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="test-stage" target="test-runner">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow1-label" value="🔄 Execute Tests" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1;" vertex="1" connectable="0" parent="flow1">
-          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset"/>
-          </mxGeometry>
-        </mxCell>
-        
-        <!-- Karate to APIs -->
-        <mxCell id="flow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=3;strokeColor=#FF8C00;" edge="1" parent="1" source="test-runner" target="api-gateway">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow2-label" value="📡 API Calls" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1;" vertex="1" connectable="0" parent="flow2">
-          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset"/>
-          </mxGeometry>
-        </mxCell>
-        
-        <!-- APIs Response to Karate -->
-        <mxCell id="flow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;strokeWidth=3;strokeColor=#4169E1;" edge="1" parent="1" source="response-proc" target="assertions">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow3-label" value="📋 Validate Response" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1;" vertex="1" connectable="0" parent="flow3">
-          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset"/>
-          </mxGeometry>
-        </mxCell>
-        
-        <!-- Results to GitLab -->
-        <mxCell id="flow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;strokeWidth=3;strokeColor=#2E8B57;" edge="1" parent="1" source="reports-gen" target="report-stage">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow4-label" value="📊 Generate Reports" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1;" vertex="1" connectable="0" parent="flow4">
-          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset"/>
-          </mxGeometry>
-        </mxCell>
-        
-        <!-- Pipeline Stages Flow -->
-        <mxCell id="stage-flow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;strokeColor=#228B22;" edge="1" parent="1" source="prepare-stage" target="build-stage">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="stage-flow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;strokeColor=#228B22;" edge="1" parent="1" source="build-stage" target="test-stage">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="stage-flow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;strokeColor=#228B22;" edge="1" parent="1" source="test-stage" target="report-stage">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        
-        <!-- Infrastructure connections -->
-        <mxCell id="infra-flow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;strokeColor=#708090;dashed=1;" edge="1" parent="1" source="gitlab-zone" target="monitoring">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="infra-flow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;strokeColor=#708090;dashed=1;" edge="1" parent="1" source="karate-zone" target="notifications">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        
-        <!-- Legend -->
-        <mxCell id="legend" value="🎨 LÉGENDE" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#F0F0F0;strokeColor=#808080;" vertex="1" parent="1">
-          <mxGeometry x="80" y="40" width="120" height="40" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="legend-gitlab" value="🟢 GitLab CI/CD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
-          <mxGeometry x="220" y="40" width="100" height="30" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="legend-karate" value="🔴 Karate Tests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
-          <mxGeometry x="340" y="40" width="100" height="30" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="legend-apis" value="🔵 External APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
-          <mxGeometry x="460" y="40" width="100" height="30" as="geometry"/>
-        </mxCell>
-        
-        <mxCell id="legend-infra" value="⚫ Infrastructure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D3D3D3;strokeColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="580" y="40" width="100" height="30" as="geometry"/>
-        </mxCell>
-        
-        <!-- Title -->
-        <mxCell id="title" value="🏗️ ARCHITECTURE DES FLUX - TESTS D'INTÉGRATION APIs REST" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#2F4F4F;" vertex="1" parent="1">
-          <mxGeometry x="720" y="40" width="800" height="40" as="geometry"/>
-        </mxCell>
-        
-        <!-- Subtitle -->
-        <mxCell id="subtitle" value="Karate Framework + GitLab CI/CD | Auteur: hbousse | Date: 2025-06-27" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=0;fontColor=#708090;" vertex="1" parent="1">
-          <mxGeometry x="720" y="70" width="800" height="20" as="geometry"/>
-        </mxCell>
-        
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+    <!-- Title -->
+    <mxCell id="title" value="🏗️ ARCHITECTURE DES FLUX - TESTS D'INTÉGRATION APIs REST" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#2F4F4F;" vertex="1" parent="1">
+      <mxGeometry x="200" y="40" width="1200" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Subtitle -->
+    <mxCell id="subtitle" value="Karate Framework + GitLab CI/CD | Auteur: hbousse | Date: 2025-06-27" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=0;fontColor=#708090;" vertex="1" parent="1">
+      <mxGeometry x="200" y="70" width="1200" height="20" as="geometry"/>
+    </mxCell>
+    
+    <!-- Zone GitLab CI/CD (Vert) -->
+    <mxCell id="gitlab-zone" value="GitLab CI/CD Pipeline" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#2E8B57;strokeColor=#228B22;fontColor=#FFFFFF;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="120" width="480" height="300" as="geometry"/>
+    </mxCell>
+    
+    <!-- Pipeline Stages -->
+    <mxCell id="trigger" value="🚀 Pipeline Trigger" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;fontColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="120" y="160" width="120" height="50" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="prepare-stage" value="📦 Prepare" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
+      <mxGeometry x="120" y="240" width="80" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="build-stage" value="🔨 Build" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
+      <mxGeometry x="220" y="240" width="80" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="test-stage" value="🧪 Test" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#228B22;strokeColor=#006400;fontColor=#FFFFFF;" vertex="1" parent="1">
+      <mxGeometry x="320" y="240" width="80" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="report-stage" value="📊 Report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
+      <mxGeometry x="420" y="240" width="80" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Zone Karate Framework (Rouge) -->
+    <mxCell id="karate-zone" value="Karate Test Framework" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#DC143C;strokeColor=#B22222;fontColor=#FFFFFF;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+      <mxGeometry x="640" y="120" width="400" height="300" as="geometry"/>
+    </mxCell>
+    
+    <!-- Test Components -->
+    <mxCell id="test-runner" value="⚙️ Karate Runner" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
+      <mxGeometry x="680" y="160" width="120" height="50" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="feature-files" value="📄 Feature Files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
+      <mxGeometry x="680" y="240" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="test-data" value="📊 Test Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
+      <mxGeometry x="800" y="240" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="assertions" value="✅ Assertions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B22222;strokeColor=#8B0000;fontColor=#FFFFFF;" vertex="1" parent="1">
+      <mxGeometry x="920" y="240" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <!-- Zone APIs REST (Bleu) -->
+    <mxCell id="apis-zone" value="External REST APIs" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#4169E1;strokeColor=#1E3A8A;fontColor=#FFFFFF;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+      <mxGeometry x="1120" y="120" width="400" height="300" as="geometry"/>
+    </mxCell>
+    
+    <!-- API Components -->
+    <mxCell id="api-gateway" value="🌐 API Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
+      <mxGeometry x="1160" y="160" width="120" height="50" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="auth-layer" value="🔐 Authentication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
+      <mxGeometry x="1160" y="240" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="endpoints" value="🔗 REST Endpoints" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
+      <mxGeometry x="1280" y="240" width="100" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="database" value="🗄️ Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
+      <mxGeometry x="1400" y="240" width="80" height="60" as="geometry"/>
+    </mxCell>
+    
+    <!-- Flux Arrows -->
+    <mxCell id="flow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=3;strokeColor=#FF8C00;" edge="1" parent="1" source="test-stage" target="test-runner">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="flow1-label" value="🔄 Execute Tests" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1;" vertex="1" connectable="0" parent="flow1">
+      <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+        <mxPoint as="offset"/>
+      </mxGeometry>
+    </mxCell>
+    
+    <mxCell id="flow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=3;strokeColor=#FF8C00;" edge="1" parent="1" source="test-runner" target="api-gateway">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="flow2-label" value="📡 API Calls" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1;" vertex="1" connectable="0" parent="flow2">
+      <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+        <mxPoint as="offset"/>
+      </mxGeometry>
+    </mxCell>
+    
+    <!-- Pipeline Flow -->
+    <mxCell id="stage-flow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;strokeColor=#228B22;" edge="1" parent="1" source="prepare-stage" target="build-stage">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="stage-flow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;strokeColor=#228B22;" edge="1" parent="1" source="build-stage" target="test-stage">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="stage-flow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;strokeColor=#228B22;" edge="1" parent="1" source="test-stage" target="report-stage">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    
+    <!-- Legend -->
+    <mxCell id="legend" value="🎨 LÉGENDE" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#F0F0F0;strokeColor=#808080;" vertex="1" parent="1">
+      <mxGeometry x="80" y="480" width="120" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="legend-gitlab" value="🟢 GitLab CI/CD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;" vertex="1" parent="1">
+      <mxGeometry x="220" y="480" width="100" height="30" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="legend-karate" value="🔴 Karate Tests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF6B6B;strokeColor=#B22222;" vertex="1" parent="1">
+      <mxGeometry x="340" y="480" width="100" height="30" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="legend-apis" value="🔵 External APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#1E3A8A;" vertex="1" parent="1">
+      <mxGeometry x="460" y="480" width="100" height="30" as="geometry"/>
+    </mxCell>
+    
+  </root>
+</mxGraphModel>
